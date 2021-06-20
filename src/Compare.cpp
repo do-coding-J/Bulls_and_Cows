@@ -45,8 +45,7 @@ int Compare::getInning(){
 void Compare::getInningLog(){
 	for(int i = 0 ; i < inning ; i++){
 		for(int j = 0; j<6; j++){
-			if(j == 3){cout << inningLog[i][j] << "회";} // 회 뒤에 왜 이닝이 또 나올까
-			else if(j == 4){cout << "볼 : " << inningLog[i][j] << "\t";} // 볼이 두번 출력됨?
+			if(j == 3){cout << inningLog[i][j] << "회";} 			else if(j == 4){cout << "볼 : " << inningLog[i][j] << "\t";} 
 			else if(j == 5){cout << "스트라이크 : " << inningLog[i][j] << "\t";}
 			else{cout << inningLog[i][j] << "\t";}
 		}
