@@ -31,6 +31,8 @@ int main(){
 	cout << "종료" << endl;
 */	
 	
+	
+	
 	while(true){
 		comp.getInningLog();
 		p1.setMPNum();
@@ -39,7 +41,7 @@ int main(){
 		if(comp.getInning() == 9){cout << "Game Over" << endl; break;}
 		if(comp.getStrike() == 3){cout << "You Win" << endl; break;}
 	}
-	
+
 	c1.~Com();
 	p1.~Player();
 	comp.~Compare();

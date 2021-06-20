@@ -11,5 +11,5 @@ class Compare{
 			int strike;
 			int ball;
 			int inning = 0;
-			int inningLog[9][5] = {0};
+			int inningLog[9][6] = {0};
 	};

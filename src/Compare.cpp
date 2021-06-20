@@ -23,13 +23,11 @@ void Compare::compare(int com[], int player[]){
 	for(int i = 0; i<3 ; i++){
 		inningLog[inning][i] = player[i];
 	}
-	
-	inningLog[inning][3] = ball;
-	inningLog[inning][4] = strike;
+	inningLog[inning][3] = inning + 1;
+	inningLog[inning][4] = ball;
+	inningLog[inning][5] = strike;
 	
 	inning++;
-	cout << inning << "회" << endl
-		 << "결과 : " << ball << "볼 " << strike << "스트라이크" << endl;
 }
 
 int Compare::getStrike(){
@@ -46,9 +44,10 @@ int Compare::getInning(){
 
 void Compare::getInningLog(){
 	for(int i = 0 ; i < inning ; i++){
-		for(int j = 0; j<5; j++){
-			if(j == 3){cout << inning << "회,\t 볼 : " << inningLog[i][j] << "\t";} // 볼이 두번 출력됨?
-			if(j == 4){cout << "스트라이크 : " << inningLog[i][j] << "\t";}
+		for(int j = 0; j<6; j++){
+			if(j == 3){cout << inningLog[i][j] << "회";} // 회 뒤에 왜 이닝이 또 나올까
+			else if(j == 4){cout << "볼 : " << inningLog[i][j] << "\t";} // 볼이 두번 출력됨?
+			else if(j == 5){cout << "스트라이크 : " << inningLog[i][j] << "\t";}
 			else{cout << inningLog[i][j] << "\t";}
 		}
 		cout << endl;
